@@ -21,6 +21,9 @@ class CreatePedidoProdutosTable extends Migration
             $table->foreignIdFor(Produto::class);
             $table->integer('quantidade');
             $table->timestamps();
+
+            $table->foreign('pedido_id')->references('id')->on('pedidos');
+            $table->foreign('produto_id')->references('id')->on('produtos');
         });
     }
 
@@ -31,6 +34,11 @@ class CreatePedidoProdutosTable extends Migration
      */
     public function down()
     {
+        Schema::table('pedido_produtos', function (Blueprint $table) {
+            $table->dropForeign(['pedido_id']);
+            $table->dropForeign(['produto_id']);
+        });
+        
         Schema::dropIfExists('pedido_produtos');
     }
 }

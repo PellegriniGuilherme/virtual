@@ -19,6 +19,8 @@ class CreatePedidosTable extends Migration
             $table->foreignIdFor(Cliente::class);
             $table->dateTime('data')->default(now());
             $table->timestamps();
+
+            $table->foreign('cliente_id')->references('id')->on('clientes');
         });
     }
 
@@ -29,6 +31,10 @@ class CreatePedidosTable extends Migration
      */
     public function down()
     {
+        Schema::table('pedidos', function (Blueprint $table) {
+            $table->dropForeign(['cliente_id']);
+        });
+
         Schema::dropIfExists('pedidos');
     }
 }

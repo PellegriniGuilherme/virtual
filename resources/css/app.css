@@ -1,3 +1,66 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import '../../node_modules/@vueform/multiselect/themes/default.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Poppins:wght@800&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+.guestBody {
+    @apply bg-[url('/images/bgGuest.svg')] min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 bg-cover bg-center;
+}
+
+.glass {
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.4) -21.3%, rgba(255, 255, 255, 0.1) 100.06%);
+    box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
+    border: 1px solid;  
+    border-image-source: linear-gradient(133.89deg, #FFFFFF 10.32%, rgba(252, 252, 252, 0.734338) 27.61%, rgba(251, 251, 251, 0.622329) 50.04%, rgba(247, 247, 247, 0.275101) 72.32%, rgba(244, 244, 244, 0) 99.1%); 
+    @apply w-full sm:rounded-xl sm:max-w-5/12 mt-6 sm:mt-0 px-6 py-4 overflow-hidden text-white;
+}
+
+.inputGuest {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.46)), linear-gradient(155deg, rgba(255, 255, 255, 0.4) -21.3%, rgba(255, 255, 255, 0.1) 100.06%);
+    box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+    @apply border-gray-300 text-black font-title focus:right-0 focus:border-transparent focus:ring-transparent focus:bg-gray-50 focus:shadow-inputGuest transition-all;
+}
+
+.labelGuest {
+    letter-spacing: 0.25em;
+    @apply block font-body text-base ml-6 my-3 text-white;
+}
+
+.inputForm {
+    @apply appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500;
+}
+
+.labelForm {
+    @apply block uppercase tracking-wide text-zinc-800 text-xs font-bold mb-2;
+}
+
+.form {
+    @apply flex flex-wrap;
+}
+
+.buttonGuest {
+    letter-spacing: 0.25em;
+    @apply inline-flex items-center px-4 py-2 font-body bg-lime-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-lime-800 active:bg-lime-900 focus:outline-none transition ease-in-out duration-150;
+}
+
+.buttonRed {
+    letter-spacing: 0.25em;
+    @apply inline-flex items-center px-4 py-2 font-body bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-800 active:bg-red-900 focus:outline-none transition ease-in-out duration-150;
+}
+
+.linkGuest {
+    letter-spacing: 0.25em;
+    @apply font-body text-white text-sm flex;
+}
+
+.title {
+    line-height: 80px;
+    letter-spacing: 0.25em;
+    @apply font-title w-full text-4xl text-center bg-auto bg-center bg-no-repeat my-7 px-6;
+}

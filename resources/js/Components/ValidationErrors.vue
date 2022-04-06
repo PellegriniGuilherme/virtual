@@ -8,11 +8,11 @@ const hasErrors = computed(() => Object.keys(errors.value).length > 0);
 </script>
 
 <template>
-    <div v-if="hasErrors">
-        <div class="font-medium text-red-600">Whoops! Something went wrong.</div>
+    <div class="font-body text-gray-50 bg-red-600 rounded-md p-5" v-if="hasErrors">
+        <div class="font-medium  text-center">Ops, algo deu errado!</div>
 
-        <ul class="mt-3 list-disc list-inside text-sm text-red-600">
-            <li v-for="(error, key) in errors" :key="key">{{ error }}</li>
+        <ul class="mt-3 list-none list-inside text-sm">
+            <li v-for="(error, key) in errors" :key="key">— {{ error }}</li>
         </ul>
     </div>
 </template>

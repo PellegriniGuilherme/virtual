@@ -14,7 +14,9 @@ class ProdutoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nome' => $this->faker->word,
+            'descricao' => $this->faker->paragraph(),
+            'valor_unitario' => $this->faker->randomFloat(2, 0, 1000)
         ];
     }
 }

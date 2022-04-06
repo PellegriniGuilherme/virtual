@@ -14,7 +14,7 @@ class PedidoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'cliente_id' => $this->faker->numberBetween(1, 100)
         ];
     }
 }

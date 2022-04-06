@@ -7,20 +7,11 @@ import { Head } from '@inertiajs/inertia-vue3';
     <Head title="Dashboard" />
 
     <BreezeAuthenticatedLayout>
-        <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Dashboard
-            </h2>
-        </template>
-
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 bg-white border-b border-gray-200">
-                        You're logged in!
-                    </div>
-                </div>
-            </div>
+        <div class="w-auto bg-gray-50 mx-8 my-4 border shadow-md rounded-md px-5 py-8">
+            <h1 class="font-title w-full text-2xl text-center bg-auto bg-center bg-no-repeat my-7 px-6">Bem vindo a Virtual!</h1>
+            <p class="block uppercase tracking-wide text-zinc-800 text-xs font-bold mb-2 text-center">
+                Sua gestão de pedidos, clientes e produtos!
+            </p>
         </div>
     </BreezeAuthenticatedLayout>
 </template>

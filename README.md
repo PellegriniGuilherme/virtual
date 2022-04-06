@@ -9,6 +9,8 @@ _Por favor, rodar comandos na ordem_
 ```
   cd pasta clonada
   composer install
+  npm install
+  npm run prod
   php artisan migrate
   php artisan db:seed
   php artisan server
